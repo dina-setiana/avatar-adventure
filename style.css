@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-darker: #2A2438;
+  --color-light: #DBD8E3;
+  --color-dark: #352F44;
+  --color-gray: #5C5470;
+  --body: 200px;
+  --head: 380px;
+  --hand: 80px;
+  --leg: 100px;
+  --arm: 90px;
+}
+
+html,
+body {
+  background-color: var(--color-darker);
+  font-family: 'Share Tech Mono', monospace;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  width: fit-content;
+}
+
+#sidebar {
+  background-color: var(--color-gray);
+  color: var(--color-light);
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+}
+
+#sidebar .basic-info {
+  margin-top: 5rem;
+}
+
+#sidebar .bar {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.bar progress {
+  background-color: var(--color-light);
+  padding: 1px;
+  width: 100%;
+}
+
+.bar>span {
+  margin-top: 2rem;
+}
+
+.bar progress::-webkit-progress-bar {
+  background-color: var(--color-light);
+  height: 1rem;
+}
+
+#health-bar::-webkit-progress-value {
+  background-color: #00ADB5;
+}
+
+#hunger-bar::-webkit-progress-value {
+  background-color: #128f02;
+}
+
+#happiness-bar::-webkit-progress-value {
+  background-color: #FD7014;
+}
+
+#sidebar .setting-button,
+#container #game-over button {
+  background-color: var(--color-light);
+  border-bottom: 2px solid #ffffff;
+  color: var(--color-dark);
+}
+
+#container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  text-align: center;
+}
+
+#container #game-over {
+  display: none;
+  color: var(--color-light);
+  font-size: 3.5rem;
+}
+
+#container #game-over p {
+  margin: 0;
+}
+
+#container .sprite-wrapper {
+  text-align: center;
+}
+
+#container .action-btn-group {
+  column-gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.action-btn-group .btn {
+  padding: 1.5rem 3rem;
+}
+
+.action-btn-group .health-btn {
+  background-color: #00ADB5;
+}
+
+.action-btn-group .hunger-btn {
+  background-color: #128f02;
+}
+
+.action-btn-group .happiness-btn {
+  background-color: #FD7014;
+}

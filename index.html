@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Pet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <aside id="sidebar">
+    <div class="basic-info">
+      <p id="name">Name</p>
+      <p id="age">Age</p>
+    </div>
+    <div class="bar">
+      <span>Health</span>
+      <progress id="health-bar" value="100" max="100"></progress>
+      <span>Hunger</span>
+      <progress id="hunger-bar" value="0" max="100"></progress>
+      <span>Happiness</span>
+      <progress id="happiness-bar" value="100" max="100"></progress>
+    </div>
+    <div>
+
+      <button class="btn setting-button">Settings</button>
+    </div>
+  </aside>
+  <main id="container">
+    <div id="game-over">
+      <p>You died!</p>
+      <button id="reset" class="btn">Reset</button>
+    </div>
+    <div class="sprite-wrapper">
+      <canvas id="sprite" width="160" height="220"></canvas>
+    </div>
+    <div class="action-btn-group">
+      <button id="health" class="btn health-btn">Clean</button>
+      <button id="hunger" class="btn hunger-btn">Feed</button>
+      <button id="happiness" class="btn happiness-btn">Play</button>
+    </div>
+  </main>
+</body>
+<script type="module"  src="script.js"></script>
+
+</html>
