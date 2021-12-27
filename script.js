@@ -6,6 +6,8 @@ const sprites = {
 }
 
 const canvas = document.querySelector('canvas');
+const name = document.querySelector("#name span");
+const input = document.querySelector("#name-input input");
 
 const petIns = new Sprite(canvas, sprites);
 console.log("PET INST", petIns);
@@ -30,10 +32,21 @@ document.getElementById("hunger").addEventListener('click', () => {
 document.getElementById("happiness").addEventListener('click', () => {
   petIns.increaseHappiness = randomInt();
 });
+document.querySelector(".edit-icon").addEventListener('click', () => {
+  document.getElementById("name-input").style.display = 'flex';
+  document.querySelector("#name").style.display = 'none';
+  input.value = name.innerText;
+});
+
+document.querySelector(".save-icon").addEventListener('click', () => {
+  document.getElementById("name-input").style.display = 'none';
+  document.querySelector("#name").style.display = 'block';
+  name.innerText = input.value;
+});
 
 const pet = petIns.create();
 const _onload = () => {
-  document.querySelector("#name").innerText = randomName(randomInt(5, 15));
+  name.innerText = randomName(randomInt(5, 15));
   const petInt = petIns.draw(pet);
 
   let happiness = setInterval(() => {

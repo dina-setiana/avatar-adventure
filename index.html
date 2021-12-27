@@ -17,7 +17,14 @@
 <body>
   <aside id="sidebar">
     <div class="basic-info">
-      <p id="name">Name</p>
+      <div id="name">
+        <span>Name</span>
+        <span class="edit-icon">&#x270E;</span>
+      </div>
+      <div id="name-input" style="display: none;" >
+        <input type="text" placeholder="Name">
+        <span class="save-icon">&#x2713;</span>
+      </div>
       <p id="age">Age</p>
     </div>
     <div class="bar">
@@ -48,6 +55,6 @@
     </div>
   </main>
 </body>
-<script type="module"  src="script.js"></script>
+<script type="module" src="script.js"></script>
 
 </html>
