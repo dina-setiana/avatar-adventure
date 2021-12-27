@@ -6,6 +6,7 @@ Web based tamagochi inspired virtual avatar adventure game.
 ## Features
 
 - User can clean, feed and play with avatar to increase or decrease their statuses.
+- User can rename avatar.
 
 ## Running The Project
 
