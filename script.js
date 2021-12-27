@@ -10,7 +10,6 @@ const name = document.querySelector("#name span");
 const input = document.querySelector("#name-input input");
 
 const petIns = new Sprite(canvas, sprites);
-console.log("PET INST", petIns);
 let speedInterval = 1000;
 let totalTime = 0;
 let happinessInterval = 1000 * 5;
